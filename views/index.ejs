@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <h1><%=dayOfWeek%>, <%=month%> <%=today.getDate()%></h1>
+
+            <div id="list">
+                <form action="/" method="POST">
+                    <input type="text" name="todo" placeholder="What To Do" required maxlength="50">
+                    <input type="submit" class="add-btn" value="+">
+                </form>
+                <% for(var i=0; i<todoList.length; i++) { %>
+                    <p class="todo-element">
+                        <input type="checkbox">
+                        <label class="strikethrough"><%=todoList[i]%></label>
+                        <button class="edit-btn"><span>EDIT</span></button>
+                    </p>
+                <% } %>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Copyright © <%= new Date().getFullYear() %></p>
+        </footer>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

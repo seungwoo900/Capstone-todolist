@@ -1,0 +1,94 @@
+.strikethrough {
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked + label.strikethrough {
+    text-decoration: line-through;
+}
+
+main {
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+    min-height: 80vh;
+}
+
+body {
+    background-color: #C6DCBA;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+h1 {
+    background-color: #B3A398;
+    padding: 1rem;
+}
+
+#container {
+    background-color: #D7E4C0;
+    border-radius: 20%;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    
+    width: 400px;
+    height: 500px;
+}
+
+#list {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    height: 30px;
+}
+
+.add-btn, .edit-btn, .save-btn {
+    border-radius: 100%;
+    background-color: #B3A398;
+    border: 2px solid #B3A398;
+
+    padding: 10px 15px;
+    cursor: pointer;
+
+    height: 35px;
+    width: 35px;
+
+    
+}
+
+.add-btn {
+    right: 0;
+    padding: 0;
+
+}
+
+.todo-element {
+    position: relative;
+}
+
+.edit-btn, .save-btn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.edit-btn span {
+    line-height: 1;
+}
